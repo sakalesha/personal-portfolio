@@ -64,21 +64,6 @@ export const HomePage: React.FC = () => {
             </div>
 
             <div className="bg-white dark:bg-dark-card p-8 rounded-2xl shadow-sm border border-slate-100 dark:border-dark-border">
-              <div className="bg-purple-100 dark:bg-purple-900/30 w-12 h-12 rounded-lg flex items-center justify-center mb-6">
-                <Database className="w-6 h-6 text-purple-600 dark:text-purple-400" />
-              </div>
-              <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-3">Data Science</h3>
-              <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-4">
-                Extracting insights from data using Python libraries. Experience in data cleaning, visualization, and statistical analysis.
-              </p>
-              <ul className="text-sm text-slate-500 dark:text-slate-500 space-y-1">
-                <li>• Pandas & NumPy</li>
-                <li>• Matplotlib & Seaborn</li>
-                <li>• Exploratory Data Analysis</li>
-              </ul>
-            </div>
-
-            <div className="bg-white dark:bg-dark-card p-8 rounded-2xl shadow-sm border border-slate-100 dark:border-dark-border">
               <div className="bg-green-100 dark:bg-green-900/30 w-12 h-12 rounded-lg flex items-center justify-center mb-6">
                 <Code2 className="w-6 h-6 text-green-600 dark:text-green-400" />
               </div>
@@ -90,6 +75,21 @@ export const HomePage: React.FC = () => {
                 <li>• Scikit-Learn & XGBoost</li>
                 <li>• Model Evaluation</li>
                 <li>• Feature Engineering</li>
+              </ul>
+            </div>
+
+            <div className="bg-white dark:bg-dark-card p-8 rounded-2xl shadow-sm border border-slate-100 dark:border-dark-border">
+              <div className="bg-purple-100 dark:bg-purple-900/30 w-12 h-12 rounded-lg flex items-center justify-center mb-6">
+                <Database className="w-6 h-6 text-purple-600 dark:text-purple-400" />
+              </div>
+              <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-3">Data Science</h3>
+              <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-4">
+                Extracting insights from data using Python libraries. Experience in data cleaning, visualization, and statistical analysis.
+              </p>
+              <ul className="text-sm text-slate-500 dark:text-slate-500 space-y-1">
+                <li>• Pandas & NumPy</li>
+                <li>• Matplotlib & Seaborn</li>
+                <li>• Exploratory Data Analysis</li>
               </ul>
             </div>
           </div>

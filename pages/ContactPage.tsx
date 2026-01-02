@@ -5,21 +5,40 @@ import { Mail, MapPin, Send } from 'lucide-react';
 export const ContactPage: React.FC = () => {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState('');
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Simulate submission
-    setTimeout(() => {
-      setIsSubmitted(true);
-      setFormData({ name: '', email: '', message: '' });
-    }, 1000);
+    setIsSubmitting(true);
+    setError('');
+
+    try {
+      const response = await fetch('/api/send', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setIsSubmitted(true);
+        setFormData({ name: '', email: '', message: '' });
+      } else {
+        const data = await response.json();
+        setError(data.error || 'Something went wrong. Please try again.');
+      }
+    } catch (err) {
+      setError('Failed to send message. Please try again later.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
     <div className="pt-24 pb-16 min-h-screen">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-16">
-          
+
           <div>
             <h1 className="text-4xl font-bold text-slate-900 dark:text-white mb-6">Get in Touch</h1>
             <p className="text-lg text-slate-600 dark:text-slate-400 mb-12">
@@ -54,7 +73,7 @@ export const ContactPage: React.FC = () => {
               <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-4">Connect</h3>
               <div className="flex gap-4">
                 {SOCIAL_LINKS.map(link => (
-                  <a 
+                  <a
                     key={link.platform}
                     href={link.url}
                     target="_blank"
@@ -77,7 +96,7 @@ export const ContactPage: React.FC = () => {
                 </div>
                 <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-2">Message Sent!</h3>
                 <p className="text-slate-600 dark:text-slate-400">Thanks for reaching out. I'll get back to you soon.</p>
-                <button 
+                <button
                   onClick={() => setIsSubmitted(false)}
                   className="mt-8 text-primary-600 font-medium hover:underline"
                 >
@@ -95,7 +114,8 @@ export const ContactPage: React.FC = () => {
                     className="w-full px-4 py-3 rounded-lg bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition-all"
                     placeholder="John Doe"
                     value={formData.name}
-                    onChange={(e) => setFormData({...formData, name: e.target.value})}
+                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                    disabled={isSubmitting}
                   />
                 </div>
                 <div>
@@ -107,7 +127,8 @@ export const ContactPage: React.FC = () => {
                     className="w-full px-4 py-3 rounded-lg bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition-all"
                     placeholder="john@example.com"
                     value={formData.email}
-                    onChange={(e) => setFormData({...formData, email: e.target.value})}
+                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                    disabled={isSubmitting}
                   />
                 </div>
                 <div>
@@ -119,14 +140,23 @@ export const ContactPage: React.FC = () => {
                     className="w-full px-4 py-3 rounded-lg bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition-all resize-none"
                     placeholder="Tell me about your project..."
                     value={formData.message}
-                    onChange={(e) => setFormData({...formData, message: e.target.value})}
+                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                    disabled={isSubmitting}
                   />
                 </div>
+
+                {error && (
+                  <p className="text-red-500 text-sm">{error}</p>
+                )}
+
                 <button
                   type="submit"
-                  className="w-full px-6 py-4 bg-slate-900 dark:bg-white text-white dark:text-slate-900 font-bold rounded-lg hover:bg-slate-800 dark:hover:bg-slate-200 transition-colors flex items-center justify-center gap-2"
+                  disabled={isSubmitting}
+                  className="w-full px-6 py-4 bg-slate-900 dark:bg-white text-white dark:text-slate-900 font-bold rounded-lg hover:bg-slate-800 dark:hover:bg-slate-200 transition-colors flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  Send Message <Send size={18} />
+                  {isSubmitting ? 'Sending...' : (
+                    <>Send Message <Send size={18} /></>
+                  )}
                 </button>
               </form>
             )}

@@ -24,6 +24,15 @@ export interface Experience {
   type: 'Education' | 'Hackathon' | 'Work';
 }
 
+export interface Certificate {
+  id: string;
+  title: string;
+  issuer: string;
+  date: string;
+  pdfUrl: string;
+  description?: string;
+}
+
 export interface SocialLink {
   platform: string;
   url: string;

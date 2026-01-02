@@ -11,6 +11,9 @@ Congratulations on building your portfolio! Since you've already pushed your cod
 4.  Vercel will automatically detect `Vite`.
 5.  Click **Deploy**.
 6.  **Done!** Your site will be live at `https://personal-portfolio-noun.vercel.app`.
+7.  **Email Setup**: Go to **Settings** -> **Environment Variables** in your Vercel project and add:
+    - Key: `RESEND_API_KEY`
+    - Value: `re_123456789...` (Get this from your [Resend Dashboard](https://resend.com/api-keys))
 
 ---
 

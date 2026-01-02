@@ -1,8 +1,8 @@
-import { Project, SkillCategory, Experience, SocialLink } from './types';
+import { Project, SkillCategory, Experience, SocialLink, Certificate } from './types';
 
 export const PERSONAL_DETAILS = {
   name: "Ronada Sakalesha",
-  title: "Full Stack Developer & Data Science Enthusiast",
+  title: "Full Stack Developer & Machine Learning Enthusiast",
   email: "ronadasakalesha@gmail.com",
   tagline: "Bridging the gap between complex data and intuitive user experiences.",
   about: "I am a Computer Science undergraduate at Dayananda Sagar University with a strong foundation in building scalable web applications and predictive machine learning models. My passion lies in solving real-world problems through code, whether it's optimizing subscription management or engineering robust recommendation engines.",
@@ -25,7 +25,7 @@ export const PROJECTS: Project[] = [
       "Mobile-first design for field usage",
       "Real-time crop advisory updates"
     ],
-    imageUrl: "https://images.unsplash.com/photo-1625246333195-58196b3c9117?auto=format&fit=crop&q=80&w=800",
+    imageUrl: "/farmwise.png",
     githubUrl: "https://github.com/sakalesha/FarmWise",
     category: "Full Stack"
   },
@@ -39,7 +39,7 @@ export const PROJECTS: Project[] = [
       "Real-time inventory tracking",
       "Streamlined book issue/return workflow"
     ],
-    imageUrl: "https://images.unsplash.com/photo-1507842217121-ad959ce7ef9e?auto=format&fit=crop&q=80&w=800",
+    imageUrl: "/library.png",
     githubUrl: "https://github.com/sakalesha/LibraryManagementSystem",
     category: "Full Stack"
   },
@@ -53,7 +53,7 @@ export const PROJECTS: Project[] = [
       "Increased mobile engagement by 30% via responsive UI",
       "Secure JWT Authentication implementation"
     ],
-    imageUrl: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=800",
+    imageUrl: "/subscription.png",
     githubUrl: "https://github.com/sakalesha/smart-subscription-tracker",
     category: "Full Stack"
   },
@@ -67,7 +67,7 @@ export const PROJECTS: Project[] = [
       "Improved issue visibility by 40%",
       "Real-time Geotagging & Media Uploads"
     ],
-    imageUrl: "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?auto=format&fit=crop&q=80&w=800",
+    imageUrl: "/safety.png",
     githubUrl: "https://github.com/sakalesha/safety-alert",
     category: "Full Stack"
   },
@@ -81,7 +81,7 @@ export const PROJECTS: Project[] = [
       "Implemented Tree-based feature selection",
       "End-to-end ML pipeline from preprocessing to evaluation"
     ],
-    imageUrl: "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&q=80&w=800",
+    imageUrl: "/movie-recs.png",
     githubUrl: "https://github.com/sakalesha/movie-recommendation",
     category: "Machine Learning"
   },
@@ -95,7 +95,7 @@ export const PROJECTS: Project[] = [
       "Low-latency data aggregation",
       "Designed for mobile dashboards"
     ],
-    imageUrl: "https://images.unsplash.com/photo-1592210454359-9043f067919b?auto=format&fit=crop&q=80&w=800",
+    imageUrl: "/weather.png",
     githubUrl: "https://github.com/sakalesha/weather-api",
     category: "Full Stack"
   }
@@ -132,13 +132,48 @@ export const TIMELINE: Experience[] = [
     date: "Expected Sep 2027",
     description: "CGPA: 8.48. Coursework: DSA, OOP, MERN Stack, DBMS, Probability & Statistics, Machine Learning.",
     type: "Education"
+  }
+];
+
+export const CERTIFICATES: Certificate[] = [
+  {
+    id: "cert-1",
+    title: "NASA Space Apps Challenge 2024",
+    issuer: "NASA",
+    date: "2024",
+    pdfUrl: "/certificates/nasa.pdf",
+    description: "Global Hackathon Participation"
   },
   {
-    id: "hack-1",
-    role: "DSU CODE RED Hackathon",
-    company: "Participant",
+    id: "cert-2",
+    title: "CodeFury 7.0",
+    issuer: "IEEE",
     date: "2024",
-    description: "Designed a prototype web app for reporting environmental issues in a 24-hour sprint. Focused on usability and civic innovation.",
-    type: "Hackathon"
+    pdfUrl: "/certificates/codefury.pdf",
+    description: "National Level Hackathon Finalist"
+  },
+  {
+    id: "cert-3",
+    title: "Innovation by Design",
+    issuer: "Mobile World Congress",
+    date: "2024",
+    pdfUrl: "/certificates/innovation.pdf",
+    description: "Workshop on Design Thinking"
+  },
+  {
+    id: "cert-4",
+    title: "DSU Code Red",
+    issuer: "Dayananda Sagar University",
+    date: "2024",
+    pdfUrl: "/certificates/code-red.pdf",
+    description: "Hackathon Participation"
+  },
+  {
+    id: "cert-5",
+    title: "Pandas",
+    issuer: "Kaggle",
+    date: "2024",
+    pdfUrl: "/certificates/pandas.png",
+    description: "Data Analysis Certification"
   }
 ];

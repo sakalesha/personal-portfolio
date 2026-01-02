@@ -36,14 +36,12 @@ export const Navbar: React.FC = () => {
     <nav className="fixed w-full z-50 top-0 start-0 border-b border-gray-200 dark:border-dark-border bg-white/80 dark:bg-dark-bg/80 backdrop-blur-md transition-colors duration-300">
       <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between px-6 py-4">
         <NavLink to="/" className="flex items-center space-x-2 rtl:space-x-reverse">
-          <div className="bg-slate-900 dark:bg-white p-1.5 rounded-lg">
-            <Terminal className="w-5 h-5 text-white dark:text-slate-900" />
-          </div>
+
           <span className="self-center text-xl font-bold whitespace-nowrap dark:text-white tracking-tight">
-            Ronada S.
+            Ronada Sakalesha
           </span>
         </NavLink>
-        
+
         <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
           <button
             onClick={toggleTheme}
@@ -52,7 +50,7 @@ export const Navbar: React.FC = () => {
           >
             {isDark ? <Sun size={20} /> : <Moon size={20} />}
           </button>
-          
+
           <button
             onClick={toggleMenu}
             className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-dark-card dark:focus:ring-gray-600"
@@ -70,10 +68,9 @@ export const Navbar: React.FC = () => {
                   to={link.path}
                   onClick={() => setIsOpen(false)}
                   className={({ isActive }) =>
-                    `block py-2 px-3 rounded md:p-0 transition-colors ${
-                      isActive
-                        ? 'text-primary-600 dark:text-primary-500 font-semibold'
-                        : 'text-gray-900 hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary-600 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700'
+                    `block py-2 px-3 rounded md:p-0 transition-colors ${isActive
+                      ? 'text-primary-600 dark:text-primary-500 font-semibold'
+                      : 'text-gray-900 hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary-600 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700'
                     }`
                   }
                 >

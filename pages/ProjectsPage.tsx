@@ -9,7 +9,7 @@ export const ProjectsPage: React.FC = () => {
         <div className="max-w-3xl mb-12">
           <h1 className="text-4xl font-bold text-slate-900 dark:text-white mb-6">Projects</h1>
           <p className="text-lg text-slate-600 dark:text-slate-400">
-            Here is a collection of my technical projects, ranging from Algorithmic Trading systems and specialized Bots to Full Stack web applications.
+            Here is a collection of my technical projects, ranging from Full Stack web applications to intelligent Machine Learning systems.
             Each project represents a challenge I've solved and a skill I've refined.
           </p>
         </div>
