@@ -17,6 +17,51 @@ export const SOCIAL_LINKS: SocialLink[] = [
 export const PROJECTS: Project[] = [
   {
     id: "1",
+    title: "SafetyAlert",
+    description: "A real-time community safety reporting platform enabling users to post, track, and visualize local hazards on an interactive map.",
+    techStack: ["React", "Node.js", "Express", "MongoDB", "Leaflet Maps", "JWT"],
+    metrics: [
+      "Reduced manual reporting delays by 70%",
+      "Improved issue visibility by 40%",
+      "Real-time Geotagging & Media Uploads"
+    ],
+    imageUrl: "/safety.png",
+    githubUrl: "https://github.com/sakalesha/safety-alert",
+    liveUrl: "https://safety-alert-ochre.vercel.app/",
+    category: "Full Stack"
+  },
+  {
+    id: "2",
+    title: "Smart Subscription Tracker",
+    description: "A comprehensive full-stack application designed to help users manage recurring subscriptions. It features automated renewal tracking and expense visualization.",
+    techStack: ["React", "Node.js", "Express", "MongoDB", "JWT", "Tailwind CSS"],
+    metrics: [
+      "Reduced manual tracking time by 70%",
+      "Increased mobile engagement by 30% via responsive UI",
+      "Secure JWT Authentication implementation"
+    ],
+    imageUrl: "/subscription.png",
+    githubUrl: "https://github.com/sakalesha/smart-subscription-tracker",
+    liveUrl: "https://smart-subscription-tracker-dawb.vercel.app/login",
+    category: "Full Stack"
+  },
+  {
+    id: "3",
+    title: "Movie Recommendation System",
+    description: "An intelligent machine learning system that predicts movie success (Hit/Flop) utilizing advanced feature engineering and ensemble classification models.",
+    techStack: ["Python", "Scikit-Learn", "XGBoost", "Pandas", "Seaborn"],
+    metrics: [
+      "Optimized prediction accuracy by 28%",
+      "Implemented Tree-based feature selection",
+      "End-to-end ML pipeline from preprocessing to evaluation"
+    ],
+    imageUrl: "/movie-recs.png",
+    githubUrl: "https://github.com/sakalesha/movie-recommendation",
+    //liveUrl: "https://movie-recs-demo.onrender.com",
+    category: "Machine Learning"
+  },
+  {
+    id: "4",
     title: "FarmWise",
     description: "A mobile-first agricultural advisory platform empowering farmers with multi-language crop guidance (English, Hindi, Kannada) and real-time pest management solutions.",
     techStack: ["React", "Node.js", "PWA", "MongoDB", "i18n"],
@@ -27,10 +72,11 @@ export const PROJECTS: Project[] = [
     ],
     imageUrl: "/farmwise.png",
     githubUrl: "https://github.com/sakalesha/FarmWise",
+    liveUrl: "https://farm-wise-nu.vercel.app/",
     category: "Full Stack"
   },
   {
-    id: "2",
+    id: "5",
     title: "Library Management System",
     description: "A comprehensive library automation system featuring automated bookkeeping, fine generation, and real-time book tracking. Built with a robust Java backend.",
     techStack: ["Java", "SQL", "JDBC", "Swing/JavaFX"],
@@ -43,49 +89,7 @@ export const PROJECTS: Project[] = [
     githubUrl: "https://github.com/sakalesha/LibraryManagementSystem",
     category: "Full Stack"
   },
-  {
-    id: "3",
-    title: "Smart Subscription Tracker",
-    description: "A comprehensive full-stack application designed to help users manage recurring subscriptions. It features automated renewal tracking and expense visualization.",
-    techStack: ["React", "Node.js", "Express", "MongoDB", "JWT", "Tailwind CSS"],
-    metrics: [
-      "Reduced manual tracking time by 70%",
-      "Increased mobile engagement by 30% via responsive UI",
-      "Secure JWT Authentication implementation"
-    ],
-    imageUrl: "/subscription.png",
-    githubUrl: "https://github.com/sakalesha/smart-subscription-tracker",
-    category: "Full Stack"
-  },
-  {
-    id: "4",
-    title: "SafetyAlert",
-    description: "A real-time community safety reporting platform enabling users to post, track, and visualize local hazards on an interactive map.",
-    techStack: ["React", "Node.js", "Express", "MongoDB", "Leaflet Maps", "JWT"],
-    metrics: [
-      "Reduced manual reporting delays by 70%",
-      "Improved issue visibility by 40%",
-      "Real-time Geotagging & Media Uploads"
-    ],
-    imageUrl: "/safety.png",
-    githubUrl: "https://github.com/sakalesha/safety-alert",
-    category: "Full Stack"
-  },
-  {
-    id: "5",
-    title: "Movie Recommendation System",
-    description: "An intelligent machine learning system that predicts movie success (Hit/Flop) utilizing advanced feature engineering and ensemble classification models.",
-    techStack: ["Python", "Scikit-Learn", "XGBoost", "Pandas", "Seaborn"],
-    metrics: [
-      "Optimized prediction accuracy by 28%",
-      "Implemented Tree-based feature selection",
-      "End-to-end ML pipeline from preprocessing to evaluation"
-    ],
-    imageUrl: "/movie-recs.png",
-    githubUrl: "https://github.com/sakalesha/movie-recommendation",
-    category: "Machine Learning"
-  },
-  {
+  /*{
     id: "6",
     title: "Weather API",
     description: "A specialized API service providing simplified weather summaries for major Indian cities. Aggregates and processes data from Open-Meteo for lightweight frontend consumption.",
@@ -97,8 +101,9 @@ export const PROJECTS: Project[] = [
     ],
     imageUrl: "/weather.png",
     githubUrl: "https://github.com/sakalesha/weather-api",
+    liveUrl: "https://weather-api-demo.vercel.app",
     category: "Full Stack"
-  }
+  }*/
 ];
 
 export const SKILLS: SkillCategory[] = [

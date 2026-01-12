@@ -17,7 +17,7 @@ export const Footer: React.FC = () => {
       <div className="w-full max-w-7xl mx-auto p-4 md:py-8">
         <div className="sm:flex sm:items-center sm:justify-between">
           <span className="text-xl font-bold text-gray-900 dark:text-white mb-4 sm:mb-0 block sm:inline">
-            Ronada S.
+            Ronada Sakalesha
           </span>
           <ul className="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
             {SOCIAL_LINKS.map((link) => (
