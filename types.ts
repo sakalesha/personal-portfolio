@@ -7,7 +7,7 @@ export interface Project {
   imageUrl: string;
   githubUrl: string;
   liveUrl?: string;
-  category: 'Full Stack' | 'Machine Learning' | 'Data Science';
+  category: 'Full Stack' | 'Machine Learning';
 }
 
 export interface SkillCategory {

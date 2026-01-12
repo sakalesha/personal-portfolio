@@ -7,11 +7,11 @@ import { ArrowRight, Code2, Database, Layout } from 'lucide-react';
 
 export const HomePage: React.FC = () => {
   const featuredProjects = PROJECTS.slice(0, 3);
-  
+
   return (
     <div className="space-y-24 pb-16">
       <Hero />
-      
+
       {/* Featured Projects Section */}
       <section className="max-w-7xl mx-auto px-6">
         <div className="flex justify-between items-end mb-12">
@@ -25,13 +25,13 @@ export const HomePage: React.FC = () => {
             View All <ArrowRight className="ml-2 w-4 h-4" />
           </Link>
         </div>
-        
+
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {featuredProjects.map((project, index) => (
             <ProjectCard key={project.id} project={project} index={index} />
           ))}
         </div>
-        
+
         <div className="mt-8 md:hidden text-center">
           <Link to="/projects" className="inline-flex items-center text-primary-600 font-medium">
             View All Projects <ArrowRight className="ml-2 w-4 h-4" />
@@ -46,8 +46,8 @@ export const HomePage: React.FC = () => {
             <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-4">Core Expertise</h2>
             <p className="text-slate-600 dark:text-slate-400">My technical skill set spans across the entire development lifecycle.</p>
           </div>
-          
-          <div className="grid md:grid-cols-3 gap-8">
+
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             <div className="bg-white dark:bg-dark-card p-8 rounded-2xl shadow-sm border border-slate-100 dark:border-dark-border">
               <div className="bg-blue-100 dark:bg-blue-900/30 w-12 h-12 rounded-lg flex items-center justify-center mb-6">
                 <Layout className="w-6 h-6 text-blue-600 dark:text-blue-400" />
@@ -75,21 +75,6 @@ export const HomePage: React.FC = () => {
                 <li>• Scikit-Learn & XGBoost</li>
                 <li>• Model Evaluation</li>
                 <li>• Feature Engineering</li>
-              </ul>
-            </div>
-
-            <div className="bg-white dark:bg-dark-card p-8 rounded-2xl shadow-sm border border-slate-100 dark:border-dark-border">
-              <div className="bg-purple-100 dark:bg-purple-900/30 w-12 h-12 rounded-lg flex items-center justify-center mb-6">
-                <Database className="w-6 h-6 text-purple-600 dark:text-purple-400" />
-              </div>
-              <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-3">Data Science</h3>
-              <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-4">
-                Extracting insights from data using Python libraries. Experience in data cleaning, visualization, and statistical analysis.
-              </p>
-              <ul className="text-sm text-slate-500 dark:text-slate-500 space-y-1">
-                <li>• Pandas & NumPy</li>
-                <li>• Matplotlib & Seaborn</li>
-                <li>• Exploratory Data Analysis</li>
               </ul>
             </div>
           </div>
